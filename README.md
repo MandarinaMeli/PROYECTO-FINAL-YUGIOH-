@@ -47,8 +47,7 @@ https://youtu.be/u5239-cGZcU
 
 TEGNOLOGIA UTILIZADA 
 
-
-
+Python 3.11.7
 
 
 
