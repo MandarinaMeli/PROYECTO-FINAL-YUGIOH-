@@ -1,0 +1,52 @@
+{% extends "CARTAS/padre.html" %}
+
+{% block titulo %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"  class="text-white" content="width=device-width, initial-scale=1.0">
+    <title>Nueva Pelicula</title> 
+</head>
+<body class="text-danger">
+    <h1> Agrega un juego </h1>
+
+    <form action="/nuevoJuego/" class="text-white" method="post"> {% csrf_token %}
+
+        <p> nombre <input type="text" name="name">  </p>
+        <p> año    <input type="number" name="year"> </p>
+        <p> invocacion <input type="text" name="invocation"> </p>
+        <p> personajes <input type="text" name="character"> </p>
+
+
+        <input type="submit"  value="Guardar">
+    </form>
+    <body>
+        
+        <h1>Buscar juego por letras:</h1> 
+    
+    
+        <form action="/resultadosJuego/" class="text-white" method="GET">
+            Ingresa nombre de juego: <input type="text" name="año">
+            <input type="submit" value="Buscar"> 
+        </form>
+    
+    
+        {% if juego %}
+    
+        {% for x in juego %}
+    
+        <p>{{x.nombre}}</p>
+    
+        {% endfor %}
+    
+        {% endif %}
+        
+
+    </body>
+
+
+</body>
+</html>
+{% endblock %}

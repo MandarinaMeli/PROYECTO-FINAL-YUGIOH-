@@ -1,0 +1,57 @@
+{% extends "CARTAS/padre.html" %}
+
+{% block titulo %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" class="text-white" content="width=device-width, initial-scale=1.0">
+    <title>Nueva Serie</title>
+</head>
+<body class="text-danger">
+    <h1> Agrega una Serie</h1>
+
+    <form action="/nuevaSerie/" class="text-white" method="post"> {% csrf_token %}
+
+        
+
+        <p> nombre <input type="text" name="name">  </p>
+        <p> año    <input type="number" name="year"> </p>
+        <p> invocacion <input type="text" name="invocation"> </p>
+        <p> personajes <input type="text" name="character"> </p>
+
+        <input type="submit" value="Guardar"> 
+    </form>
+
+    <body>
+
+        <h1>Buscar serie por letras:</h1>
+    
+    
+        <form action="/resultadosSerie/" class="text-white" method="GET">
+            Ingresa nombre de serie: <input type="text" name="año">
+            <input type="submit" value="Buscar"> 
+        </form>
+            
+        
+        {% if serie %}
+    
+        {% for x in serie %}
+    
+        <p>{{x.nombre}}</p>
+    
+        {% endfor %}
+    
+        {% endif %}
+        
+       
+        
+    
+    </body>
+<body>
+    
+</html>   
+
+{% endblock %}

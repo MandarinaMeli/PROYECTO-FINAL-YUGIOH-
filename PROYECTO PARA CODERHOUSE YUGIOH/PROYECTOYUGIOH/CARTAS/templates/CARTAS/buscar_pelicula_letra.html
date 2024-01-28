@@ -1,0 +1,26 @@
+{% extends "CARTAS/padre.html" %}
+
+{% block titulo %}
+<body  class="text-white">  
+    
+    <h1>Buscar peliculas por letras:</h1>
+
+
+    <form action="/resultadosPelicula/" class="text-white" method="GET">
+        Ingresa nombre de pelicula: <input type="text" name="año">
+        <input type="submit" value="Buscar"> 
+    </form>
+
+
+    {% if peliculas %}
+
+    {% for x in peliculas %}
+
+    <p>{{x.nombre}}</p>
+
+    {% endfor %}
+
+    {% endif %}
+    
+</body>
+{% endblock %}

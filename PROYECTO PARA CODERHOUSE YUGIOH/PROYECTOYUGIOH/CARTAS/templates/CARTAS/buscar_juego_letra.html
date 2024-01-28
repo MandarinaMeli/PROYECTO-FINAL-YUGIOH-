@@ -1,0 +1,26 @@
+{% extends "CARTAS/padre.html" %}
+
+{% block titulo %}
+<body class="text-white">
+
+    <h1>Buscar juego por letras:</h1>
+
+
+    <form action="/resultadosJuego/"  class="text-white" method="GET">
+        Ingresa nombre de juego: <input type="text" name="año">
+        <input type="submit" value="Buscar"> 
+    </form>
+
+
+    {% if juegos %}
+
+    {% for x in juegos %}
+
+    <p>{{x.nombre}}</p>
+
+    {% endfor %}
+
+    {% endif %}
+    
+</body>
+{% endblock %}

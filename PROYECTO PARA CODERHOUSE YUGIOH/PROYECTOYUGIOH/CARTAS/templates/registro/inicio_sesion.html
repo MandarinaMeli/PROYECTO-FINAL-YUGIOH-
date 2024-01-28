@@ -1,0 +1,23 @@
+{% extends "CARTAS/padre.html" %}
+
+{% block titulo %}
+
+INICIO SESION
+
+
+{% endblock %}
+
+
+{% block contenido1 %}
+
+<form class="text-white"  method="POST"  action=""> {% csrf_token %}
+
+
+    {{formu}}
+
+    <input type="submit" value="Iniciar Sesión">
+
+</form>
+
+{% endblock %}
+

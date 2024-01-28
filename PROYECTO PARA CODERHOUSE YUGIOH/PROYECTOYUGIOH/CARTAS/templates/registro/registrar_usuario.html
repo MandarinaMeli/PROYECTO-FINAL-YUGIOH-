@@ -1,0 +1,22 @@
+{% extends "CARTAS/padre.html" %}
+
+{% block titulo %}
+
+REGRISTRATE
+
+
+{% endblock %}
+
+
+{% block contenido1 %}
+
+<form class="text-white"  method="POST"  action=""> {% csrf_token %}
+
+
+    {{formu}}
+
+    <input type="submit" value="Registarse">
+
+</form>
+
+{% endblock %}

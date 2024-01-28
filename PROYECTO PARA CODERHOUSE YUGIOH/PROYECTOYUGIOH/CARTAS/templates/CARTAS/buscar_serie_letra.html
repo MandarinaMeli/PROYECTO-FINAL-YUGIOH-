@@ -1,0 +1,26 @@
+{% extends "CARTAS/padre.html" %}
+
+{% block titulo %}
+<body class="text-white">
+
+    <h1>Buscar serie por letras:</h1>
+
+
+    <form action="/resultadosSerie/"  class="text-white" method="GET">
+        Ingresa nombre de serie: <input type="text" name="año">
+        <input type="submit" value="Buscar"> 
+    </form>
+
+
+    {% if series %}
+
+    {% for x in series %}
+
+    <p>{{x.nombre}}</p>
+
+    {% endfor %}
+
+    {% endif %}
+    
+</body>
+{% endblock %}

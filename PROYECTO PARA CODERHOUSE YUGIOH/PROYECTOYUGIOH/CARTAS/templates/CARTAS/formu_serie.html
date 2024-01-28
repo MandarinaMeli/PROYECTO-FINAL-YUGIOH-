@@ -1,0 +1,18 @@
+{% extends "CARTAS/padre.html" %}
+
+{% block titulo %}
+
+    <h1> Agrega una Serie</h1>
+
+    <form action="" class="text-white" method="POST"> {% csrf_token %}
+
+        
+        {{mi_formu.as_table}}
+    
+
+        <input type="submit" value="Guardar">
+    </form>
+
+
+
+{% endblock %}
